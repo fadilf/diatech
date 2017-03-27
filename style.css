@@ -524,6 +524,11 @@ footer #footer-logo {
     .open-card .card-answer {
         padding: .5em 5%;
     }
+
+    #panel .item {
+        width: 12em;
+        height: 9em;
+    }
 }
 
 @media (max-width: 700px){
