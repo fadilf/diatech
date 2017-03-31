@@ -7,10 +7,9 @@ $(document).ready(function(){
     });
     $("#video-button").click(function(){
         $("#video").css("display", "block");
-        $("#video video").get(0).play();
     });
     $("#close-video").click(function(){
-        $("#video video").get(0).pause();
+        $("#video iframe").attr("src", $("#video iframe").attr("src"));
         $("#video").css("display", "none");
     });
     $(".card").click(function(){
