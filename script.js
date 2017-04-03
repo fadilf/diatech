@@ -1,9 +1,17 @@
 $(document).ready(function(){
-    $(document).on('click', 'a', function(event){
-        event.preventDefault();
-        $('html, body').animate({
-            scrollTop: ($( $.attr(this, 'href') ).offset().top - 60)
-        }, 500);
+    $(function(){
+        $('a[href*="#"]:not([href="#"])').click(function(){
+            if(location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname){
+                var target = $(this.hash);
+                target = target.length?target:$('[name='+this.hash.slice(1) +']');
+                if(target.length){
+                    $('html, body').animate({
+                        scrollTop: target.offset().top
+                    }, 500);
+                    return false;
+                }
+            }
+        });
     });
     $("#video-button").click(function(){
         $("#video").css("display", "block");
@@ -21,5 +29,11 @@ $(document).ready(function(){
         $(".open-card").removeClass("open-card");
         $("#close-card").css("display", "none");
         $("#card-back").css("display", "none");
+    });
+    $("#toggle-menu").click(function(){
+        if($("#navbar").hasClass("open-nav"))
+            $("#navbar").removeClass("open-nav");
+        else
+            $("#navbar").addClass("open-nav");
     });
 });

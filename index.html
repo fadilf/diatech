@@ -9,16 +9,23 @@
     </head>
     <body id="top">
         <nav>
-            <ul id="navbar">
+            <ul class="closed-nav" id="navbar">
                 <a href="#top">
                     <li id="brand"></li>
                 </a>
+                <button id="toggle-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
                 <span id="links">
+                    <a href="#top"><li>Home</li></a>
                     <a href="#about"><li>About</li></a>
                     <a href="#why"><li>Why Vue</li></a>
                     <a href="#faqs"><li>FAQs</li></a>
                     <a href="https://vue.backerkit.com/hosted_preorders" target="_blank"><li id="preorder">Preorder</li></a>
                 </span>
+                <div id="links-back"></div>
             </ul>
         </nav>
         <div id="intro">

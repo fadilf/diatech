@@ -8,7 +8,7 @@
 body {
     margin: 0;
     font-family: "Montserrat";
-    padding-top: 3.7em;
+    border-top: solid #697689 3.7em;
     color: #2e2e2e;
 }
 
@@ -29,6 +29,17 @@ body {
     }
     to {
         opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+        display: block;
+    }
+    to {
+        opacity: 0;
+        display: block;
     }
 }
 
@@ -88,6 +99,10 @@ body {
 #navbar li#preorder:hover {
     color: #fff;
     background-color: #3deb87;
+}
+
+#toggle-menu, #links-back {
+    display: none;
 }
 
 /*
@@ -173,8 +188,11 @@ body {
 /*
     About
 */
-#about-bg {
-    background-image: linear-gradient(90deg, #82A7DC, #BBD4F5);
+#about {
+    position: relative;
+    top: -3.6em;
+    margin: 0 0 -3.6em 0;
+    padding-top: 3.6em;
 }
 
 #about-bg img, #why-head img {
@@ -285,7 +303,10 @@ body {
     Why Vue
 */
 #why {
-    margin: 0;
+    position: relative;
+    top: -3.6em;
+    margin: 0 0 -3.6em 0;
+    padding-top: 3.6em;
 }
 
 #why h2 {
@@ -370,6 +391,11 @@ body {
 #faqs {
     background-image: linear-gradient(#23A6B9, #1C8291);
     padding-bottom: 1em;
+    position: relative;
+    top: -3.6em;
+    margin: 0 0 -3.6em 0;
+    border-top: solid 3.6em;
+    z-index: -1;
 }
 
 #faqs h2 {
@@ -575,4 +601,94 @@ footer #footer-logo {
         display: block;
     }
     
+}
+
+@media (max-width: 550px){
+    #navbar {
+        display: block;
+        height: 4em;
+    }
+    
+    #navbar #links {
+        position: fixed;
+        left: 100%;
+        display: block;
+        width: 80%;
+        background-color: #697689;
+        padding: 0 10%;
+        box-shadow: inset rgba(0, 0, 0, 0.6) 0 5px 10px -5px;
+        transition: left .5s;
+        height: 100%;
+        top: 4.05em;
+        z-index: 3;
+    }
+    
+    #navbar #links li {
+        display: block;
+        text-align: center;
+        border-bottom: solid 3px rgba(0, 0, 0, 0.5);
+    }
+    
+    #toggle-menu {
+        border: 0;
+        padding: 0;
+        display: inline-block;
+        background: transparent;
+        width: 4em;
+        height: 3.3em;
+        cursor: pointer;
+        outline: 0;
+    }
+
+    #toggle-menu .bar {
+        display: block;
+        padding: 0;
+        border: 0;
+        width: 3em;
+        height: 4px;
+        margin: 5px auto;
+        background: #fff;
+        border-radius: 0.4em;
+        opacity: 1;
+        transform: rotate(0deg) translate(0, 0);
+        transition: opacity .5s, transform .5s;
+    }
+    
+    #navbar.open-nav #links {
+        left: 20%;
+    }
+
+    #navbar.open-nav #toggle-menu .bar:first-child {
+        transform: rotate(45deg) translate(.58em, .58em);
+    }
+
+    #navbar.open-nav #toggle-menu .bar:nth-of-type(2) {
+        opacity: 0;
+    }
+
+    #navbar.open-nav #toggle-menu .bar:last-child {
+        transform: rotate(-45deg) translate(.58em, -.58em);
+    }
+    
+    #navbar #links-back {
+        display: none;
+        position: fixed;
+        top: 4.05em;
+        left: 0;
+        height: calc(100% - 4.05em);
+        width: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        animation: fade inverse 0.5s;
+    }
+    
+    #navbar.open-nav #links-back {
+        display: block;
+        position: fixed;
+        top: 4.05em;
+        left: 0;
+        height: calc(100% - 4.05em);
+        width: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        animation: fade 0.5s;
+    }
 }
