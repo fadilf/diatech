@@ -307,14 +307,14 @@ body {
 }
 
 #why-head {
-    background-color: #1DEF1B;
+    background-color: #05cc02;
 }
 
 #why-info {
     padding-top: .5em;
     padding-bottom: 1em;
     text-align: center;
-    background-image: linear-gradient(#1DEF1B, #23A6B9);
+    background-image: linear-gradient(#05cc02, #23A6B9);
 }
 
 .why-item {
