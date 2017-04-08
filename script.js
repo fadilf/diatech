@@ -14,10 +14,11 @@ $(document).ready(function(){
         });
     });
     $("#video-button").click(function(){
+        $("#video iframe").attr("src", "https://www.youtube.com/embed/IU5sUI5kjLQ");
         $("#video").css("display", "block");
     });
     $("#close-video").click(function(){
-        $("#video iframe").attr("src", $("#video iframe").attr("src"));
+        $("#video iframe").attr("src", "");
         $("#video").css("display", "none");
     });
     $(".card").click(function(){
