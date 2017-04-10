@@ -524,6 +524,43 @@ footer #footer-logo {
     display: none;
 }
 
+#social {
+    display: block;
+    float: left;
+}
+
+#social li {
+    display: inline-block;
+    height: 2.9em;
+    width: 2.9em;
+    border-radius: 50%;
+    background-color: #292929;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 1.8em;
+    transition: .2s;
+}
+
+#social li:hover {
+    opacity: .9;
+}
+
+#social a {
+    text-decoration: none;
+    display: inline-block;
+    height: 2.9em;
+    width: 2.9em;
+    border-radius: 50%;
+}
+
+#social #facebook {
+    background-image: url(img/facebook.svg);
+}
+
+#social #twitter {
+    background-image: url(img/twitter.svg);
+}
+
 /*
     Responsive Styling
 */
@@ -593,6 +630,12 @@ footer #footer-logo {
     
     #footer-break {
         display: block;
+    }
+
+    #social {
+        display: block;
+        float: none;
+        padding: 0;
     }
     
 }
