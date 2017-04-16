@@ -582,6 +582,24 @@ footer #footer-logo {
         width: 12em;
         height: 9em;
     }
+    
+    .why-item {
+        width: 50em;
+        font-size: 1.2em;
+    }
+    
+    .why-item:nth-child(2n) {
+        text-align: right;
+    }
+
+    .why-item-title {
+        padding: 0 0 .5em 15%;
+    }
+
+    .why-item-title:nth-child(2n) {
+        padding: 0 15% .5em 0;
+    }
+    
 }
 
 @media (max-width: 700px){
