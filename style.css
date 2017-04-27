@@ -27,6 +27,7 @@ body {
     from {
         opacity: 0;
     }
+    
     to {
         opacity: 1;
     }
@@ -98,7 +99,7 @@ body {
     Intro
 */
 #intro {
-    background-image: url(img/disassembled-glasses-wide.png);
+    background-image: url(img/disassembled-glasses-wide.jpg);
     background-size: cover;
     background-position: center;
     padding-top: 5em;
@@ -254,7 +255,7 @@ body {
 }
 
 #panel .item.i-black {
-    background-image: url(img/black.png);
+    background-image: url(img/black.jpg);
 }
 
 #panel .item.i-selection {
@@ -281,7 +282,7 @@ body {
     padding: .8em 0;
     font-size: 1.1em;
     font-weight: 600;
-    border: solid #484848 1px;
+    border: solid #484848 2px;
     border-left: none;
     border-right: none;
 }
@@ -293,6 +294,17 @@ body {
     font-weight: bold;
 }
 
+#about-text {
+    display: inline-block;
+    width: 65%;
+    margin-top: 2em;
+    padding: 1em;
+    font-size: 1.1em;
+    border: solid #484848 2px;
+    border-left: none;
+    border-right: none;
+}
+
 /*
     Why Vue
 */
@@ -301,6 +313,7 @@ body {
     top: -3.6em;
     margin: 0 0 -3.6em 0;
     padding-top: 3.6em;
+    text-align: center;
 }
 
 #why h2 {
@@ -323,12 +336,14 @@ body {
 }
 
 .why-item {
-    margin: 4em auto;
+    margin: 2em auto;
     width: 40em;
+    text-align: left;
+    display: inline-block;
 }
 
 .why-item:first-child {
-    margin: 2em auto 4em auto;
+    margin: 2em auto 2em auto;
     width: 40em;
 }
 
@@ -349,6 +364,7 @@ body {
     margin: .7em 1em;
     max-width: 10em;
     vertical-align: top;
+    float: left;
 }
 
 .why-item img.displaced {
@@ -363,6 +379,10 @@ body {
     width: 25em;
     vertical-align: top;
     text-align: left;
+}
+
+.why-item:nth-child(2n) {
+    text-align: right;
 }
 
 .why-item:nth-child(2n) .why-item-title {
@@ -584,7 +604,7 @@ footer #footer-logo {
     }
     
     .why-item {
-        width: 50em;
+        width: 50em !important;
         font-size: 1.2em;
     }
     
@@ -599,7 +619,6 @@ footer #footer-logo {
     .why-item-title:nth-child(2n) {
         padding: 0 15% .5em 0;
     }
-    
 }
 
 @media (max-width: 700px){
@@ -624,6 +643,7 @@ footer #footer-logo {
 
     .why-item {
         width: 95% !important;
+        text-align: center !important;
     }
     
     .why-item-info {
@@ -659,7 +679,6 @@ footer #footer-logo {
         float: none;
         padding: 0;
     }
-    
 }
 
 @media (max-width: 550px){
